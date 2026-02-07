@@ -1,0 +1,11 @@
+hr {
+  border: none;       /* remove default border */
+  height: 2px;        /* thickness */
+  background-color: #333; /* color */
+  margin: 20px 0;     /* top and bottom gap */
+}
+
+h1 {
+    text-align: center;
+    margin-top: 1rem;
+}

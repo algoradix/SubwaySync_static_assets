@@ -1,0 +1,148 @@
+h1 {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+/* Sections */
+section {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+section h2 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: #444;
+}
+
+/* Line Buttons */
+.line-selector {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+/* Line Buttons with MTA Colors */
+.line-btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  min-width: 40px;
+}
+
+/* Red lines */
+.line-btn.\31,
+.line-btn.\32,
+.line-btn.\33 {
+  background-color: #ee352e;
+}
+
+
+.line-btn.\34,
+.line-btn.\35,
+.line-btn.\36 {
+  background-color: #00933c;
+}
+
+
+.line-btn.\37 {
+  background-color: #b933ad;
+}
+
+/* Blue lines */
+.line-btn.A,
+.line-btn.C,
+.line-btn.E {
+  background-color: #0039a6;
+}
+
+/* Orange lines */
+.line-btn.B,
+.line-btn.D,
+.line-btn.F,
+.line-btn.M {
+  background-color: #ff6319;
+}
+
+/* Light green line */
+.line-btn.G {
+  background-color: #6cbe45;
+}
+
+/* Yellow lines */
+.line-btn.N,
+.line-btn.Q,
+.line-btn.R,
+.line-btn.W {
+  background-color: #fccc0a;
+}
+
+/* Gray line */
+.line-btn.L {
+  background-color: #a7a9ac;
+}
+
+/* Brown lines */
+.line-btn.J,
+.line-btn.Z {
+  background-color: #996633;
+}
+.line-btn:hover {
+  transform: scale(1.1);
+  transition: 0.2s;
+  cursor: default;
+}
+
+/* Day Time Ranges */
+.day {
+  margin-bottom: 1rem;
+}
+
+.day strong {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+}
+
+.day ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.day li {
+  display: inline-block;
+  background-color: #007bff20; /* subtle blue background */
+  color: #007bff;
+  padding: 0.3rem 0.6rem;
+  border-radius: 8px;
+  margin-right: 0.5rem;
+  margin-bottom: 0.3rem;
+  font-size: 0.95rem;
+}
+
+/* No alerts text */
+.day span {
+  font-style: italic;
+  color: #888;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .line-selector {
+    gap: 0.3rem;
+  }
+
+  .line-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  section {
+    padding: 1rem;
+  }
+}
