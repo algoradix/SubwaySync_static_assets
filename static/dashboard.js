@@ -36,9 +36,10 @@
     { id: "Z", color: "#996633" },
   ];
 
-  const form = document.getElementById("onboarding-form");
+  const form = document.getElementById("dashboard-form");
   const lineContainer = document.getElementById("line-container");
   const scheduler = document.getElementById("scheduler");
+
 
   let USER_LINES = [];
   let USER_TIMES = {};
