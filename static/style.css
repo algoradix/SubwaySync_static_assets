@@ -302,6 +302,38 @@ footer {
   }
 }
 
+@media (max-width: 500px) {
+  /* --- HEADER --- */
+
+  .logo {
+    font-size: 1rem;
+  }
+
+  .nav-link {
+    font-size: 0.8rem;
+  }
+
+  .lfkgorr,
+  .ii43k3 {
+    font-size: 0.8rem;
+  }
+
+  .disclaimer {
+    font-size: 0.6rem;
+    text-align: right;
+    width: 140px;
+  }
+
+  .footer-links a {
+    font-size: 0.6rem;
+  }
+
+  .footer-links {
+    line-height: 1;
+    margin-top: 0;
+  }
+}
+
 /* Day columns */
 .day-col {
   position: relative;
