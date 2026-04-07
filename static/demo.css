@@ -24,6 +24,10 @@
   margin-right: auto;
 }
 
+.hero-visual {
+  position: relative;
+}
+
 /* --- DEMO SECTIONS --- */
 
 .demo-section {
@@ -93,16 +97,24 @@
   background: var(--google-yellow);
 }
 
+.below-cal {
+  grid-area: 1 / 1;
+}
+
 .work {
   background: var(--google-green);
 }
 
 /* Popover overlay */
 .event-popover {
-  position: absolute;
+  position: absolute; /* Keep absolute so it floats above the layout */
   top: 70px;
-  left: -80px;
+
+  right: calc(40% + 5px);
   width: 420px;
+  max-width: calc(60% - 30px);
+
+  /* Leave the rest of your original styles unchanged */
   background: #f3f6fb;
   border-radius: 24px;
   padding: 20px 22px;
@@ -158,4 +170,134 @@
 .x34 {
   top: 34%;
   height: 18%;
+}
+
+@media (max-width: 1000px) {
+  .demo-section {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 805px) {
+  .popover-header h3 {
+    font-size: 0.95rem;
+  }
+
+  .popover-row {
+    margin-top: 5px;
+  }
+}
+
+@media (max-width: 768px) {
+  .demo-text {
+    text-align: center;
+  }
+
+  .event-popover {
+    right: calc(33% + 5px);
+    /* max-width: 220px; */
+  }
+
+  .demo-section {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .demo-text {
+    max-width: 100%;
+  }
+
+  .demo-text p {
+    max-width: 1000px;
+  }
+
+  /* Hide Monday column */
+  .mobile-hide {
+    display: none;
+  }
+
+  /* Calendar becomes 4 columns instead of 5 */
+  .calendar-week {
+    grid-template-columns: repeat(4, 1fr);
+    height: 380px;
+  }
+
+  .top-cal {
+    margin-left: -25px;
+    margin-right: -25px;
+  }
+
+  .top-cal-text {
+    font-size: 0.6rem;
+  }
+
+  .top-cal-text-time {
+    font-size: 7px;
+  }
+
+  /* Stack section */
+  .demo-section {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .popover-header h3 {
+    font-size: 1rem;
+  }
+
+  .popover-row {
+    grid-template-columns: 18px 1fr;
+    gap: 8px;
+    margin-top: 5px;
+    font-size: 0.8rem;
+    line-height: 1.35;
+  }
+
+  .popover-row p {
+    font-size: 0.8rem;
+  }
+
+  .below-cal {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Hide WED header */
+  .below-cal-header:nth-child(1) {
+    display: none;
+  }
+
+  /* Hide THU header */
+  .below-cal-header:nth-child(2) {
+    display: none;
+  }
+
+  /* Hide WED day column */
+  .below-cal .below-cal-day:nth-child(8) {
+    display: none;
+  }
+
+  /* Hide THU day column */
+  .below-cal .below-cal-day:nth-child(9) {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .event-popover {
+    max-width: 220px;
+  }
+
+  .below-cal-day {
+    font-size: 7px;
+  }
+
+  .x4 {
+    height: 16%;
+  }
+
+  .x19 {
+    top: 22%;
+  }
+
+
 }
